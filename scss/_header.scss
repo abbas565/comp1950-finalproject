@@ -7,9 +7,23 @@ header {
 
     h1 {
         @include flatten;
-        color: $text-color-light;
+        color: $text-color-dark;
         @media (max-width: $phoneLandscape){
             font-size: 1.6em;
         }
     }
+
+    #socialmedia-icons-header{
+        margin-top: $padding*2/3;
+        margin-right: $padding*4/3;
+
+        a{
+            text-decoration: none;
+        }
+        @media (max-width: $phoneLandscape){
+            display:none;
+        }
+    }
+    
+
 }
