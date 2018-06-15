@@ -5,5 +5,98 @@ main {
     section:not(:first-child) {
         margin-top: $padding;
     }
+
+
+    .banner {
+        position: relative;
+        z-index: 800;   
+        img {
+            animation: fadeIn 1s 1 ease both;
+        }
+    }
+    
+    .info-box {
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        color: white;
+        animation: slideInLeft 1s 0.5s 1 ease both;
+            
+        h1 {
+            margin-bottom: 0.2em;
+        }
+    
+        a {
+            color: white;
+        }
+    
+        @media screen and (max-width: $tabletLandscape){	
+                top: 60px;
+                font-size: 0.9em;                   
+        }
+    
+        @media screen and (max-width: $tabletPortrait){
+                top: 30px;	
+                font-size: 0.7em;       
+        }
+    
+        @media screen and (max-width: $phoneLandscape) {
+                top: 15px;
+                left: 20px;  
+                font-size: 0.6em;
+        }
+        
+        @media screen and (max-width: $phonePortrait) {
+                top: 0px;
+                left: 20px;  
+                font-size: 0.5em;      
+        }
+    
+        @media screen and (max-width: $phoneSmall){
+                top: 0;
+                left: 10px;
+        }
+    }
+    
+    
+    .banner-subtitle {
+        font-weight: 400;
+        @media screen and (max-width: 370px){        
+                font-size: 0.8em;   
+        }
+    }
+    
+    .banner-title {
+        font-size: 2.3em;
+        font-weight: 400;
+        @media screen and (max-width: 370px){        
+            font-size: 1.5em;
+        }
+    }
+    
+    /* Banner Image Animation Keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Info Box Animation Keyframes */
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: visible;
+      }
+    
+      to {
+        transform: translatX(0);
+         opacity: 1;
+      }
+    }
     
 }

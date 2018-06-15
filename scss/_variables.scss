@@ -1,5 +1,5 @@
 // Colors
-$brand-color: #dbd1e6;
+$brand-color: #10517D;
 $body-bg-color: #303030;
 $wrapper-bg-color: white;
 // Text Colors
@@ -8,7 +8,7 @@ $text-color-light: white;
 
 // Use Color functions to brighten and darken colors
 $brand-color-dark: darken($brand-color, 20);
-$brand-color-light: lighten($brand-color, 20);
+$brand-color-light: lighten($brand-color, 50);
 
 // Fonts
 $body-font: Georgia, Times, Times New Roman, serif;
@@ -48,6 +48,7 @@ $tabletLandscape: em(1024);
 $tabletPortrait: em(850);
 $phoneLandscape: em(670);
 $phonePortrait: em(420);
+$phoneSmall: em(370);
 
 // Utility variables
 $link-hover-selector: '&:hover, &:focus, &:active';
