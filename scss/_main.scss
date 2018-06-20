@@ -14,6 +14,18 @@ main {
         img {
             animation: fadeIn 1s 1 ease both;
         }
+        h2 {
+                position: absolute;
+                top: 15%;
+                left: 35%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 4vw;
+                letter-spacing: .2em; 
+        }
+        .customized-heading {
+            color: $text-color-medium;
+        }
     }
     
     .info-box {
@@ -103,7 +115,7 @@ main {
     text-align: left;
     // text-shadow:4px 4px 0 rgba(0,0,0,0.1);
     padding:$padding/2;
-    border: 2px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.431);
   }
    
    /* We start writing out grid(.container-index) here. */
@@ -221,13 +233,14 @@ main {
        to leave one section of the grid blank */
     grid-template-areas:
         "one two three four"
-        "five thirteen thirteen six"
-        "seven thirteen thirteen eight"
-        "nine ten eleven twelve";
+        "twelve thirteen thirteen five"
+        "eleven thirteen thirteen six"
+        "ten nine eight seven";
 
     @media screen and (max-width: $phoneLandscape) {
     grid-template-columns: 1fr;
     grid-template-areas:
+        "thirteen"
         "one"
         "two"
         "three"
@@ -239,8 +252,7 @@ main {
         "nine"
         "ten"
         "eleven"
-        "twelve"
-        "thirteen";
+        "twelve";
 }
 
     h2{
@@ -249,63 +261,68 @@ main {
 
     .box1-schedule {
         grid-area: one;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box2-schedule {
         grid-area: two;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box3-schedule {
         grid-area: three;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box4-schedule {
         grid-area: four;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box5-schedule {
         grid-area: five;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }   
 
     .box6-schedule {
         grid-area: six;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box7-schedule {
         grid-area: seven;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box8-schedule {
         grid-area: eight;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box9-schedule {
         grid-area: nine;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box10-schedule {
         grid-area: ten;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     } 
     .box11-schedule {
         grid-area: eleven;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }  
     .box12-schedule {
         grid-area: twelve;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }  
     .box13-schedule {
         grid-area: thirteen;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        font-size: calc(2vw + 8px); 
+        @include box-mixin-style;
     }    
 }
     
@@ -326,10 +343,12 @@ main {
         "seven eight thirteen thirteen"
         "nine ten thirteen thirteen"
         "eleven twelve thirteen thirteen";
-
+        
     @media screen and (max-width: $phoneLandscape) {
+        
     grid-template-columns: 1fr;
     grid-template-areas:
+        "thirteen"
         "one"
         "two"
         "three"
@@ -341,8 +360,7 @@ main {
         "nine"
         "ten"
         "eleven"
-        "twelve"
-        "thirteen";
+        "twelve";
 }
 
     h2{
@@ -351,63 +369,72 @@ main {
 
     .box1-Lesson  {
         grid-area: one;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box2-Lesson  {
         grid-area: two;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box3-Lesson  {
         grid-area: three;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box4-Lesson  {
         grid-area: four;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box5-Lesson  {
         grid-area: five;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }   
 
     .box6-Lesson  {
         grid-area: six;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box7-Lesson  {
         grid-area: seven;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
+        
     }
 
     .box8-Lesson  {
         grid-area: eight;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box9-Lesson  {
         grid-area: nine;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
+        
     }
 
     .box10-Lesson  {
         grid-area: ten;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     } 
     .box11-Lesson  {
         grid-area: eleven;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
+        
     }  
     .box12-Lesson  {
         grid-area: twelve;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
+
     }  
     .box13-Lesson  {
         grid-area: thirteen;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        font-size: calc(2vw + 8px); 
+        @include box-mixin-style;
     }    
 }
 

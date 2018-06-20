@@ -1,12 +1,13 @@
 // Footer Styles
 footer {
     padding: $padding 1.5*$padding;
-    background-color: $brand-color-light;
+    background-color: $body-bg-color;
     border-top: 1px dotted $body-bg-color;
     @include flex-layout-row;
     p {
         @include flatten;
         padding-bottom: $padding/2;
+        color: $text-color-light;
     }
 
     #socialmedia-icons-footer{
