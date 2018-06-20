@@ -191,3 +191,11 @@ $aspect-ratios: (
         }
     }
 }
+
+//box-mixin-style
+
+@mixin box-mixin-style {
+    border-radius: 5px;   
+    background: linear-gradient(to bottom, rgba(165, 165, 168, 0.356), rgba(224, 208, 208, 0.1));
+
+}
