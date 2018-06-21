@@ -549,7 +549,49 @@ main {
         margin: $padding;
     }
     
-//form style ned 
+ 
 }
+
+}
+
+//lessons 
+.lesson-content{
+    h1 {
+        margin-top: 0;
+    }
+
+    
+    text-align: center;
+
+    //Individual Lessons
+    .lesson-section {
+        padding-bottom: 1em;
+        text-align: left;
+
+        .tabbed {
+            padding-left: 40px;
+        }
+
+        video {
+            height: 100%;
+            max-width: 100%;
+          }
+
+        .centered {
+            display: block;
+            max-width: 100%;
+            @include margin-center;
+        }
+    }
+
+    @media screen and(max-width: $tabletPortrait) {
+        padding: $padding;
+    }
+
+    @media screen and(max-width: $phoneLandscape) {
+        ul {
+            padding-left: 1em;
+        }
+    }
 
 }
