@@ -1,5 +1,6 @@
 // Main Navigation Styles
-nav {
+
+.header-nav {
     // locally scoped variable
     $height: 40px;
     $border: 1px solid white;
@@ -8,38 +9,42 @@ nav {
     height: $height;
     border-top: $border;
 
-    ul {
+     ul {
         @include flatten;
         list-style: none;
         display: flex;
         @media (max-width: $phoneLandscape){
             display: block;
         }
-    }
-
-    li {
-        flex: 1;
-    }
-
-    a {
-        display: block;
-        color: $text-color-light;
-        border-top: $border;
-        line-height: $height;
-        text-align: center;
-        font-size: 1.2em;
-        text-decoration: none;
-        outline: none;
-        
-        #{$link-hover-selector} {
-            background-color: rgba(white, 0.3);
+        li {
+            flex: 1;
         }
-
-        @at-root nav li:last-child a {
-            border-right: none;
+    
+        a {
+            display: block;
+            color: $text-color-light;
+            border-top: $border;
+            line-height: $height;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+            outline: none;
+            
+            #{$link-hover-selector} {
+                background-color: rgba(white, 0.3);
+            }
+    
+            @at-root nav li:last-child a {
+                border-right: none;
+            }
+    
         }
-
+        .active {
+            background-color: rgba(white, 0.3); 
+        }
     }
+
+   
 
     @media (max-width: $phoneLandscape) {
         display: none;
@@ -59,3 +64,41 @@ nav {
     }
 
 }
+
+.footer-nav {
+    ul {
+        @include flatten;
+        list-style: none;
+        display: flex;
+        @media (max-width: $phoneLandscape){
+            padding-bottom: $padding/2;
+        }
+
+        li {
+            flex: 1;
+            padding-right: $padding/2;
+        }
+    
+        a {
+            display: block;
+            color: $text-color-light;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+            outline: none;
+            
+            #{$link-hover-selector} {
+                border-bottom: 2px solid $text-color-light;
+                padding-bottom: 4px;
+                transition: border-bottom 0.2s; 
+            }
+    
+          
+        } 
+
+    }
+    .active {
+        color: $text-color-dark;
+        font-weight: bold;
+    }
+}   
