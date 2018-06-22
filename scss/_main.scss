@@ -1,4 +1,5 @@
 // Main Styles
+
 main {
     padding: $padding;    
 
@@ -10,10 +11,19 @@ main {
     .banner {
         position: relative;
         z-index: 800;
-        padding-bottom: $padding;   
-        img {
-            animation: fadeIn 1s 1 ease both;
+        padding-bottom: $padding;
+      
+
+        .banner-outline-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $text-color-dark;
+            font-size: 5vw;
+            letter-spacing: .2em; 
         }
+        
         h2 {
                 position: absolute;
                 top: 15%;
@@ -35,12 +45,13 @@ main {
             color: $text-color-medium;
         }
     }
+
     
     .info-box {
         position: absolute;
         top: $padding/2;
         left: 80px;
-        color: black;
+        color:$text-color-dark;
         animation: slideInLeft 1s 0.5s 1 ease both;
             
         h1 {
@@ -48,7 +59,7 @@ main {
         }
     
         a {
-            color: black;
+            color: $text-color-dark;
         }
     
         @media screen and (max-width: $tabletLandscape){	
@@ -81,7 +92,8 @@ main {
         
     .banner-subtitle {
         font-weight: 400;
-        font-size: 2vw;
+        font-size: 1.6vw;
+        text-shadow: 1px 1px 1px rgb(53, 50, 50);
         @media screen and (max-width: $phoneLandscape){        
             display: none;  
         }
@@ -125,22 +137,25 @@ main {
     text-align: left;
     // text-shadow:4px 4px 0 rgba(0,0,0,0.1);
     padding:$padding/2;
-    border: 1px solid rgba(0, 0, 0, 0.431);
+    border: .5px solid rgba(0, 0, 0, 0.431);
   }
    
    /* We start writing out grid(.container-index) here. */
   .container-index {
         display: grid;
+        margin-top: 50px;
         /* Use the repeat function to repeat same sized columns */
         grid-template-columns: 3fr 4fr 2fr;
         grid-auto-rows: auto;
-        grid-gap: 20px;
+        grid-row-gap: 80px;
+        grid-column-gap: 50px;
+
         /* Note: use " . "  as a placeholder if you want
            to leave one section of the grid blank */
         grid-template-areas:
             "one two three"
             "four four four"
-            "five five five";
+            " five five five";
 
         @media screen and (max-width: $phoneLandscape) {
         grid-template-columns: 1fr;
@@ -152,48 +167,84 @@ main {
 			"five";
     }
 
-    h2{
-        text-shadow:4px 4px 0 #341f941a;
-    }
 
     .box1 {
         grid-area: one;
+        @include box-shadow;
+        padding-top: 30px;  
+        
     }
 
     .box2 {
         grid-area: two;
+        @include box-shadow;
+        padding-top: 30px; 
     }
 
     .box3 {
         grid-area: three;
+        @include box-shadow;
+        @include box-mixin-style;
+        padding-top: 30px; 
+       
     }
 
     .box4 {
         grid-area: four;
-        background-color: #FFF2D5;
+        background-color: $brand-color-medium;
+        color: white;
+        @include box-shadow;
+        padding: $padding*2;
+        p {
+            font-size: 2em;
+            
+        }
+       h2 {
+        font-size: 2em;
+        text-align: center;
+       }
     }
 
     .box5 {
         grid-area: five;
-        background-color: #FFF2D5;
+        box-shadow: -1px 2px 1px 2px $brand-color-dark;
+        margin-bottom: 40px;
+        h2 {
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);
+            text-align: center;
+            padding: .9em;
+        }
+        li {
+            padding: .1em;
+        }
+        
     }   
   }
 
      /* We start writing out grid(.container-outline) here. */
      .container-outline {
+        margin-top: 50px;
         display: grid;
         /* Use the repeat function to repeat same sized columns */
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-auto-rows: auto;
-        grid-gap: 20px;
+        grid-row-gap: 40px;
+        grid-column-gap: 80px;
         /* Note: use " . "  as a placeholder if you want
            to leave one section of the grid blank */
         grid-template-areas:
-            "one one one"
-            "two two three"
-            "four five five";
+            "three two two two"
+            "one one one one"
+            "five five four four";
+            
 
         @media screen and (max-width: $phoneLandscape) {
+        .box4 {
+            p {
+                text-align: left;
+            }
+        }
         grid-template-columns: 1fr;
         grid-template-areas:
 			"one"
@@ -203,31 +254,38 @@ main {
 			"five";
     }
 
-    h2{
-        text-shadow:4px 4px 0 #341f941a;
-    }
-
+    
     .box1-outline {
         grid-area: one;
-        background-color: #FFF2D5;
+        @include box-mixin-style;
     }
 
     .box2-outline {
         grid-area: two;
-        background-color: #FFF2D5;
+        border-radius: 5px;
+        @include box-shadow;
     }
 
     .box3-outline {
         grid-area: three;
+        border-radius: 5px;
+        @include box-shadow;
     }
 
     .box4-outline {
+        max-width: 70%;
         grid-area: four;
+        h2 {
+            text-align: center;
+        }
     }
 
     .box5-outline {
         grid-area: five;
-        background-color: #FFF2D5;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow:2px 2px 9px $brand-color-dark;
+        
     }   
   }
 
@@ -235,10 +293,11 @@ main {
    /* We start writing out grid(.container-schedule) here. */
    .container-schedule {
     display: grid;
+    margin-top: 50px;
     /* Use the repeat function to repeat same sized columns */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    grid-gap: 20px;
+    grid-gap: 40px;
     /* Note: use " . "  as a placeholder if you want
        to leave one section of the grid blank */
     grid-template-areas:
@@ -343,7 +402,7 @@ main {
     /* Use the repeat function to repeat same sized columns */
     grid-template-columns: .6fr .6fr 1fr 1fr;
     grid-auto-rows: auto;
-    grid-gap: 20px;
+    grid-gap: 40px;
     /* Note: use " . "  as a placeholder if you want
        to leave one section of the grid blank */
     grid-template-areas:
@@ -455,7 +514,7 @@ main {
     /* Use the repeat function to repeat same sized columns */
     grid-template-columns:1fr;
     grid-auto-rows: auto;
-    grid-gap: 20px;
+    grid-gap: 40px;
     /* Note: use " . "  as a placeholder if you want
        to leave one section of the grid blank */
     grid-template-areas:

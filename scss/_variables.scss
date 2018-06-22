@@ -11,6 +11,7 @@ $text-color-light: white;
 // Use Color functions to brighten and darken colors
 $brand-color-dark: darken($brand-color, 20);
 $brand-color-light: lighten($brand-color, 50);
+$brand-color-medium: rgb(78, 91, 104);
 
 // Fonts
 $body-font: Georgia, Times, Times New Roman, serif;

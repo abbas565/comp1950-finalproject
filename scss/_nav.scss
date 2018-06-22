@@ -98,7 +98,7 @@
 
     }
     .active {
-        color: $text-color-dark;
+        color:darken($text-color-medium, 20);
         font-weight: bold;
     }
 }   

@@ -5,7 +5,7 @@
     $table-headings-color: darken($table-caption-color, 20);
 
     // Data Table Column Colours
-    $colour1: rgba(1, 41, 95, 1);
+    $colour1: rgb(100, 107, 116);
     $colour2: rgba(67, 127, 151, 1);
     $colour3: rgba(132, 147, 36, 1);
     $colour4: rgba(255, 179, 15, 1);
@@ -24,7 +24,9 @@
     font-family: $heading-font;
     width: $one-col;
     border: $table-border;
-
+    td-01 {
+        
+    }
     th, td {
         text-align: center;
         padding: $cell-padding;
@@ -74,7 +76,7 @@
                     background-color: lightblue;
                 }
                 &:nth-child(odd){
-                    background-color: pink;
+                    background-color: white;
                 }
             }
             td {
@@ -87,10 +89,10 @@
                 }
                 @at-root .dt tbody tr td:nth-child(1n){
                     background-color: transparent;
-                    color: black;
+                    color:$text-color-dark;
                     &:hover {
                         background-color: rgba(white, 0.5);
-                        color: black;
+                        color:$text-color-dark;
                     }
                 }
             }    
