@@ -203,4 +203,9 @@ $aspect-ratios: (
     box-shadow:4px 4px 4px $brand-color-dark;
 }
 
+@mixin box-schedule {
+    color: $text-color-light;
+    background-color: $brand-color-medium;
+}
+
 

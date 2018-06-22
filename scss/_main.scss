@@ -46,7 +46,6 @@ main {
         }
     }
 
-    
     .info-box {
         position: absolute;
         top: $padding/2;
@@ -100,8 +99,8 @@ main {
     }
     
     .banner-title {
-        font-size: 4vw;
-        font-weight: 400;
+        font-size: 3vw;
+        font-weight: 300;
         color: $text-color-light;
     }
     
@@ -141,28 +140,32 @@ main {
   }
    
    /* We start writing out grid(.container-index) here. */
+  .bold {
+      font-weight: bold;
+  }
   .container-index {
         display: grid;
         margin-top: 50px;
         /* Use the repeat function to repeat same sized columns */
-        grid-template-columns: 3fr 4fr 2fr;
+        grid-template-columns: 3fr 1fr 1fr;
         grid-auto-rows: auto;
-        grid-row-gap: 80px;
+        grid-row-gap: 100px;
         grid-column-gap: 50px;
 
         /* Note: use " . "  as a placeholder if you want
            to leave one section of the grid blank */
         grid-template-areas:
-            "one two three"
+            "three three three"
+            "two one one"
             "four four four"
-            " five five five";
+            "five five five";
 
         @media screen and (max-width: $phoneLandscape) {
         grid-template-columns: 1fr;
         grid-template-areas:
-			"one"
+            "three"
 			"two"
-			"three"
+			"one"
 			"four"
 			"five";
     }
@@ -171,21 +174,44 @@ main {
     .box1 {
         grid-area: one;
         @include box-shadow;
-        padding-top: 30px;  
-        
+        @include box-mixin-style;
+        padding: $padding; 
+        h2 {
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);    
+        }
+        li {
+            margin-bottom: 30px;
+        }       
     }
 
     .box2 {
         grid-area: two;
         @include box-shadow;
-        padding-top: 30px; 
-    }
+        padding: 40px;
+        
+       
+       h2 {
+        font-size: 2em;
+       }
+
+}
 
     .box3 {
         grid-area: three;
         @include box-shadow;
-        @include box-mixin-style;
-        padding-top: 30px; 
+        padding-top: $padding; 
+        h2 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);
+           }
+        p {
+            text-align: center;
+            font-size: 2em;
+            color: $text-color-medium;
+            text-shadow: 2px 2px 4px  rgb(184, 173, 173); 
+        }
        
     }
 
@@ -203,12 +229,14 @@ main {
         font-size: 2em;
         text-align: center;
        }
+
     }
 
     .box5 {
         grid-area: five;
         box-shadow: -1px 2px 1px 2px $brand-color-dark;
         margin-bottom: 40px;
+        padding: $padding $padding*2;
         h2 {
             font-size: 2em;
             text-shadow: 2px 2px 4px rgb(184, 173, 173);
@@ -222,21 +250,26 @@ main {
     }   
   }
 
+
+
      /* We start writing out grid(.container-outline) here. */
      .container-outline {
         margin-top: 50px;
+        margin-bottom: 30px;
         display: grid;
         /* Use the repeat function to repeat same sized columns */
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: auto;
-        grid-row-gap: 40px;
+        grid-column-gap: 20px;
+        grid-row-gap: 60px;
         grid-column-gap: 80px;
         /* Note: use " . "  as a placeholder if you want
            to leave one section of the grid blank */
         grid-template-areas:
-            "three two two two"
-            "one one one one"
-            "five five four four";
+            "three two two"
+            "one one one"
+            "five five five"
+            "four four four";
             
 
         @media screen and (max-width: $phoneLandscape) {
@@ -247,45 +280,81 @@ main {
         }
         grid-template-columns: 1fr;
         grid-template-areas:
-			"one"
-			"two"
 			"three"
-			"four"
-			"five";
+			"two"
+			"one"
+            "five"
+            "four";
     }
 
     
     .box1-outline {
         grid-area: one;
+        text-align: justify;
         @include box-mixin-style;
+        @include box-shadow;
+        padding: 20px 70px 60px 70px;
+        letter-spacing: .2px;
+        background-color: $brand-color-medium;
+        color: white;
+        h2 {
+                font-size: 2em;
+                text-shadow: 2px 2px 4px rgb(184, 173, 173);
+                text-align: center;
+                padding: .9em;
+        }
+        p{
+            line-height: 200%;
+        }
     }
 
     .box2-outline {
         grid-area: two;
         border-radius: 5px;
         @include box-shadow;
+        padding-left: 50px; 
+        align-self: center;
+        li {
+            padding: $padding/3;
+        }
     }
 
     .box3-outline {
         grid-area: three;
         border-radius: 5px;
         @include box-shadow;
+        li {
+            padding: 5px;
+        }
+        h2 {
+            padding-left: $padding/2;
+        }
+        
     }
 
     .box4-outline {
         max-width: 70%;
         grid-area: four;
+        @include box-shadow;
+        justify-self: center;     
         h2 {
             text-align: center;
         }
     }
 
     .box5-outline {
+        
         grid-area: five;
         border-radius: 5px;
-        padding: 20px;
+        padding: $padding*2;
         box-shadow:2px 2px 9px $brand-color-dark;
-        
+        h2 {
+            text-align: center;
+            padding: $padding/2;
+        }
+        li {
+            padding: 5px;
+        }
     }   
   }
 
@@ -305,6 +374,9 @@ main {
         "twelve thirteen thirteen five"
         "eleven thirteen thirteen six"
         "ten nine eight seven";
+    h2 {
+            text-shadow:4px 4px 0 #341f941a;
+        }
 
     @media screen and (max-width: $phoneLandscape) {
     grid-template-columns: 1fr;
@@ -323,67 +395,72 @@ main {
         "eleven"
         "twelve";
 }
-
-    h2{
-        text-shadow:4px 4px 0 #341f941a;
+    .box {
+        border-radius: 5px;
+        a {
+            color: $text-color-light;
+        }
     }
+    
 
     .box1-schedule {
-        grid-area: one;
-        @include box-mixin-style;
+        grid-area: one; 
+        @include box-schedule;
+          
     }
 
     .box2-schedule {
         grid-area: two;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box3-schedule {
         grid-area: three;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box4-schedule {
         grid-area: four;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box5-schedule {
         grid-area: five;
-        @include box-mixin-style;
+        @include box-schedule;
     }   
 
     .box6-schedule {
         grid-area: six;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box7-schedule {
         grid-area: seven;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box8-schedule {
         grid-area: eight;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box9-schedule {
         grid-area: nine;
-        @include box-mixin-style;
+        @include box-schedule;
     }
 
     .box10-schedule {
         grid-area: ten;
-        @include box-mixin-style;
+        @include box-schedule;
+        
     } 
     .box11-schedule {
         grid-area: eleven;
-        @include box-mixin-style;
+        @include box-schedule;       
     }  
     .box12-schedule {
         grid-area: twelve;
-        @include box-mixin-style;
+        @include box-schedule;
     }  
     .box13-schedule {
         grid-area: thirteen;
@@ -432,9 +509,6 @@ main {
         "twelve";
 }
 
-    h2{
-        text-shadow:4px 4px 0 #341f941a;
-    }
 
     .box1-Lesson  {
         grid-area: one;
@@ -538,7 +612,10 @@ main {
 
     .box2-contact {
         grid-area: two;
-        @include box-mixin-style;
+        color: $text-color-light;
+        background-color: $brand-color-medium;
+        border-radius: 5px;
+        
     }
 
     #submit {
