@@ -12,8 +12,8 @@ header {
                 @include flatten;
                 color: $text-color-light;
                 font-size: 4em;
-                padding: $padding*2/3;
-                background-color: $brand-color-dark;
+                padding: $padding $padding/3;
+                background-color: $brand-color-logo;
                 @media (max-width: $phoneLandscape){                
                 font-size: 2.5em;
                 }
@@ -31,7 +31,7 @@ header {
         }
     }
 
-    #socialmedia-icons-header{
+    #socialmedia-icons-header {
         margin-top: $padding*2/3;
         margin-right: $padding*4/3;
 

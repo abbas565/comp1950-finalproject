@@ -31,7 +31,7 @@
                 </div><!-- end button-content -->
         </button>
     </header>
-    <nav>
+    <nav class="header-nav">
         <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./outline.html">Outline</a></li>
@@ -42,19 +42,8 @@
     </nav>
     <main>
         <div class="banner">
-            <!-- <img src="./images/emile-perron-190221-unsplash (1).jpg" alt="Photo by Émile Perron on Unsplash"> -->
-            <img src="./images/emile-perron-190221-unsplash-ouline.jpg" alt="comp1950">
-            <!-- <div class="info-box">
-                <h1>
-                    <span class="banner-title">comp1950</span>                          
-                    <br>
-                    <span class="banner-subtitle">Web Development</span>
-                    <br>
-                    <span class="banner-subtitle">& DESIGN 2</span>
-                    <br>
-                    <span class="banner-subtitle">by Micaeal Whyte</span>
-                </h1>                       
-            </div> -->
+            <img src="./images/damian-zaleski-843-unsplash.jpg" alt="comp1950">
+            <h3>Contact</h3>
         </div>
 
     <div class="container-contact">
@@ -64,7 +53,7 @@
             <form action="" method="" id="form01">
                 <fieldset >
                     <legend>Have a question or message?</legend>
-                    <h2><span class="span">1</span>Your basic info</h2>                                                     
+                    <h2>Your basic info</h2>                                                     
                     <div id="info">               
                         <div id="firstname" class="form-align-top">
                             <label for="cname" ><span class="spanLable">*</span>First name:</label>
@@ -82,22 +71,22 @@
                         </div>
     
                         <div id="student-status" class="student-status">
-                            <h2><span class="span">2</span>Student status</h2>
+                            <h2>Student status</h2>
                             <!-- <label><b>Student Status:</b></label><br>                     -->
                             <input type="radio" id="Current-Student" name="student-status" value="1" checked>
-                            <label for="Current-Student">Current Student</label><br>               
+                            <label for="Current-Student"><span class="radio">Current Student</span></label><br>               
                             <input type="radio" id="Prospective-Student" name="student-status" value="2">
-                            <label for="Prospective-Student">Prospective Student</label>       
+                            <label for="Prospective-Student"><span class="radio">Prospective Student</span></label>       
                         </div>
-                        <div id="studentnumber" class="form-align-top">            
-                            <label for="snumber" ><span class="spanLable"></span>Student Number:</label>
-                            <input type="text" name="snumber" id="snumber" />
+                        <div id="snumber" class="form-align-top">            
+                        <label for="snumber"></label>
+                            <input type="text" name="snumber" id="snumber" placeholder="student number" />
                         </div>       
 
                         <div id="stext" class="form-align-top">
-                            <h2><span class="span">3</span>Student message</h2>
-                            <label for="stext" ><span class="spanLable"></span>Student message:</label>
-                            <input type="text" name="stext" id="stext" />
+                            <h2>Student message</h2>
+                            <!--<label for="stext" ><span class="spanLable"></span>Student message:</label>-->
+                            <textarea name="comment" ></textarea>
                         </div><br>                                                         
                         <div class="controls">
                             <input id="submit" name="submit" type="submit" value="Submit" />
@@ -118,8 +107,17 @@
     <footer>
         <div>
             <p>&copy; 2018 Abbas Ahmadi & Shirin Boustani</p>
-            <p>Some imagery from <a href="https://unsplash.com/">unsplash.com</a> and <a href="https://coverr.co/">coverr.co</a></p>
-        </div>     
+
+        </div>    
+        <nav class="footer-nav">
+            <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./outline.html">Outline</a></li>
+                    <li><a href="./schedule.html">Schedule</a></li>
+                    <li><a href="./lessons.html">Lessons</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>   
         <div id="socialmedia-icons-footer">
             <a href="https://twitter.com/michaelwhyte">
                 <img width="30" alt="Twitter" src="./images/my-icons-collection/svg/004-social-media-1.svg">
