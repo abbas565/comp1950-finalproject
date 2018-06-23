@@ -129,10 +129,11 @@ main {
       }
     }
 
+    
+
 /* Some default styles to make each box visible */
 .box {
-    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:$text-color-dark;
+    
     text-align: left;
     // text-shadow:4px 4px 0 rgba(0,0,0,0.1);
     padding:$padding/2;
@@ -395,12 +396,6 @@ main {
         "eleven"
         "twelve";
 }
-    .box {
-        border-radius: 5px;
-        a {
-            color: $text-color-light;
-        }
-    }
     
 
     .box1-schedule {
@@ -471,114 +466,114 @@ main {
         @include box-mixin-style;
     }    
 }
-    
 
 /* We start writing out grid(.container-lesson) here. */
 .container-Lessons {
     display: grid;
+    margin: 0 auto;
+    justify-items: center;
+    grid-row-gap: 10px;
+    max-width: 600px;
+    padding-bottom: 50px;
     /* Use the repeat function to repeat same sized columns */
-    grid-template-columns: .6fr .6fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    grid-gap: 40px;
     /* Note: use " . "  as a placeholder if you want
        to leave one section of the grid blank */
     grid-template-areas:
-        "one two thirteen thirteen"
-        "three four thirteen thirteen"
-        "five six thirteen thirteen"
-        "seven eight thirteen thirteen"
-        "nine ten thirteen thirteen"
-        "eleven twelve thirteen thirteen";
+        "thirteen thirteen thirteen thirteen"
+        "one two three four"
+        "five six seven eight"
+        "nine ten eleven twelve";
         
     @media screen and (max-width: $phoneLandscape) {
         
     grid-template-columns: 1fr;
     grid-template-areas:
-        "thirteen"
-        "one"
-        "two"
-        "three"
-        "four"
-        "five"
-        "six"
-        "seven"
-        "eight"
-        "nine"
-        "ten"
-        "eleven"
-        "twelve";
+        "thirteen thirteen"
+        "one two"
+        "three four"
+        "five six"
+        "seven eight"
+        "nine ten"
+        "eleven twelve";
 }
 
 
-    .box1-Lesson  {
-        grid-area: one;
-        @include box-mixin-style;
-    }
 
-    .box2-Lesson  {
-        grid-area: two;
-        @include box-mixin-style;
-    }
 
-    .box3-Lesson  {
-        grid-area: three;
-        @include box-mixin-style;
-    }
 
-    .box4-Lesson  {
-        grid-area: four;
-        @include box-mixin-style;
-    }
+.box1-Lesson  {
+    grid-area: one;
+    @include box-lessons;  
+       
+}
 
-    .box5-Lesson  {
-        grid-area: five;
-        @include box-mixin-style;
-    }   
+.box2-Lesson  {
+    grid-area: two;
+    @include box-lessons;   
+}
 
-    .box6-Lesson  {
-        grid-area: six;
-        @include box-mixin-style;
-    }
+.box3-Lesson  {
+    grid-area: three;
+    @include box-lessons;   
+}
 
-    .box7-Lesson  {
-        grid-area: seven;
-        @include box-mixin-style;
-        
-    }
+.box4-Lesson  {
+    grid-area: four;
+    @include box-lessons;   
+}
 
-    .box8-Lesson  {
-        grid-area: eight;
-        @include box-mixin-style;
-    }
+.box5-Lesson  {
+    grid-area: five;
+    @include box-lessons;   
+}   
 
-    .box9-Lesson  {
-        grid-area: nine;
-        @include box-mixin-style;
-        
-    }
+.box6-Lesson  {
+    grid-area: six;
+    @include box-lessons;   
+}
 
-    .box10-Lesson  {
-        grid-area: ten;
-        @include box-mixin-style;
-    } 
-    .box11-Lesson  {
-        grid-area: eleven;
-        @include box-mixin-style;
-        
-    }  
-    .box12-Lesson  {
-        grid-area: twelve;
-        @include box-mixin-style;
+.box7-Lesson  {
+    grid-area: seven;
+    @include box-lessons;   
+    
+}
 
-    }  
-    .box13-Lesson  {
-        grid-area: thirteen;
-        display: flex;
-        justify-content: center;    
-        align-items: center;
-        font-size: calc(2vw + 8px); 
-        @include box-mixin-style;
-    }    
+.box8-Lesson  {
+    grid-area: eight;
+    @include box-lessons;
+}
+
+.box9-Lesson  {
+    grid-area: nine;
+    @include box-lessons;   
+    
+}
+
+.box10-Lesson  {
+    grid-area: ten;
+    @include box-lessons;   
+} 
+.box11-Lesson  {
+    grid-area: eleven;
+    @include box-lessons;   
+    
+}  
+.box12-Lesson  {
+    grid-area: twelve;
+    @include box-lessons;   
+}  
+.box13-Lesson  {
+    grid-area: thirteen;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    font-size: calc(2vw + 8px); 
+   border-radius: 5px;
+   text-align: center;
+   border: 0;
+}    
 }
 
 
@@ -603,7 +598,6 @@ main {
         "two";
     }
 
-    
 
     .box1-contact {
         grid-area: one;
@@ -664,17 +658,17 @@ main {
       }
       
       input[type="text"]{
-        width: 330px;
+        width: 500px;
       }
       input[type="email"], select{
-        width: 330px;
+        width: 500px;
       }
       .spanLable{
         color: red;
           }
 
     textarea {
-        width: 330px;
+        width: 500px;
         height: 200px;
     }
     
@@ -731,3 +725,16 @@ main {
     }
 
 }
+a {
+    color: white;
+    font-weight: bold;
+}
+a:link { 
+   text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+    color:black;
+}
+
