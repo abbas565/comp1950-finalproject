@@ -22,6 +22,9 @@ footer {
             @media (max-width: $phoneLandscape){
                 @include flex-layout-column;
                 align-items: flex-start;
+                li {
+                    padding-bottom: 10px;
+                }
             }
         }
     }
