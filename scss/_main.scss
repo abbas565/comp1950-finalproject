@@ -571,7 +571,6 @@ main {
         "two";
     }
 
-
     .box1-contact {
         grid-area: one;
         @include box-mixin-style;
@@ -582,7 +581,7 @@ main {
         color: $text-color-light;
         background-color: $brand-color-medium;
         border-radius: 5px;
-        
+        font-size: 20px;       
     }
 
     #submit {
@@ -631,9 +630,15 @@ main {
       
       input[type="text"]{
         width: 500px;
+        @media screen and (max-width: $phoneLandscape) {
+            width: 200px;
+            }
       }
       input[type="email"], select{
         width: 500px;
+        @media screen and (max-width: $phoneLandscape) {
+            width: 200px;
+            }
       }
       .spanLable{
         color: red;
@@ -642,6 +647,9 @@ main {
     textarea {
         width: 500px;
         height: 200px;
+        @media screen and (max-width: $phoneLandscape) {
+            width: 200px;
+            }
     }
     
     .radio {
@@ -649,9 +657,7 @@ main {
     }
     .controls {
         margin: $padding;
-    }
-    
- 
+    } 
 }
 
 }
@@ -661,8 +667,7 @@ main {
     h1 {
         margin-top: 0;
     }
-
-    
+   
     text-align: center;
 
     //Individual Lessons
