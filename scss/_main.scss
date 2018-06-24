@@ -68,16 +68,15 @@ main {
         }
         
         .banner-title {
-            font-size: 6vw;
+            font-size: 5vw;
             font-weight: 600;
             color: $text-color-dark;
-            text-shadow:8px 8px 0 rgba(0,0,0,0.3);
+            text-shadow:6px 6px 0 rgba(0,0,0,0.3);
         }
     
-        .banner-subtitle {           
-            font-size: 3vw;
-            font-weight: 400;
-            text-shadow: 2px 2px 2px rgb(53, 50, 50);
+        .banner-subtitle {          
+            font-size: 2vw;
+            font-weight: bold;
             @media screen and (max-width: $phoneLandscape){        
                 display: none;  
             }
