@@ -116,6 +116,16 @@
     flex-wrap: wrap;
 }
 
+// Mixins for creating a flex column of
+// and evenly spacing out the
+// elements along the column
+@mixin flex-layout-column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 // Center elements in a flex
 // container
 @mixin flex-center {
