@@ -500,9 +500,6 @@ main {
 }
 
 
-
-
-
 .box1-Lesson  {
     grid-area: one;
     @include box-lessons;  
@@ -565,13 +562,9 @@ main {
     @include box-lessons;   
 }  
 .box13-Lesson  {
-    grid-area: thirteen;
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-    font-size: calc(2vw + 8px); 
+   grid-area: thirteen;
+   font-size: calc(2vw + 8px); 
    border-radius: 5px;
-   text-align: center;
    border: 0;
 }    
 }
@@ -726,15 +719,18 @@ main {
 
 }
 a {
-    color: white;
+    color:$text-color-light;
     font-weight: bold;
+    &:link { 
+        text-decoration: none;
+     }
+     &:hover,
+     &:active,
+     &:focus {
+         color:$text-color-dark;
+     }
 }
-a:link { 
-   text-decoration: none;
-}
-a:hover,
-a:active,
-a:focus {
-    color:black;
-}
+
+
+
 
