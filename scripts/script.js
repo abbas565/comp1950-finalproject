@@ -21,3 +21,14 @@ a.onclick = function() {
     var b = document.getElementById("snumber");
     b.style.display = "block" ;
 }
+
+// Showing images in box13 of schedule page
+function mouseEnter() {
+    document.getElementById("scheduleimg").src = "./images/schedule/Day03.jpg";
+    let myid= this;
+    console.log(myid.id);
+
+    document.getElementById("scheduleimg").src = "./images/schedule/Day"+ `${myid.id}` +".jpg";
+    
+console.log("hello abbas!!!")
+}

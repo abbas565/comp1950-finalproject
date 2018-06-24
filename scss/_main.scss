@@ -63,24 +63,28 @@ main {
     
         @media screen and (max-width: $tabletLandscape){	
                 top: $padding/3;
-                font-size: 0.9em;                   
+                font-size: 0.9em;
+                // font-size: 4vw;                   
         }
     
         @media screen and (max-width: $tabletPortrait){
                 top: $padding/4;	
-                font-size: 0.7em;       
+                font-size: 0.7em;
+                // font-size: 4vw;        
         }
     
         @media screen and (max-width: $phoneLandscape) {
                 top: $padding/5;
                 left: 20px;  
                 font-size: 0.6em;
+                // font-size: 4vw; 
         }
         
         @media screen and (max-width: $phonePortrait) {
                 top: 0px;
                 left: 20px;  
                 font-size: 0.5em;
+                // font-size: 4vw; 
         }
     
         @media screen and (max-width: $phoneSmall){
