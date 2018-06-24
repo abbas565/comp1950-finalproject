@@ -3,7 +3,7 @@ window.onload=function(){
     const form = document.getElementById('form01');
     form.addEventListener('submit', greetingText);
     
-    const text2 = document.getElementById('greeting');
+    // const text2 = document.getElementById('greeting');
     const clientName = document.getElementById('cname');
     const mydiv = document.getElementById('welcome');
     // const myvideo = document.getElementById('homepage-hero-module');
@@ -60,11 +60,21 @@ window.onload=function(){
             };
         
         const name = fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
-        // alert("Thank you "+name+" for sign up.");
+        
+        // ---------modal start-----------
+        var modal = document.getElementById('myModal');
+        document.getElementById("p01").innerHTML=`Good ${mygreetingtime} ${name}, Today is ${day}.
+        Thanks for submit a message. comp1950's instructor will be conect with you very soon.`;
+        modal.style.display = "block";
 
-        text2.innerHTML = `Good ${mygreetingtime} ${name}, Today is ${day}.
-                            Thanks for submit a message. comp1950's instructor
-                            will be conect with you very soon.`;        
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() { 
+                            modal.style.display = "none";
+                    }   
+                    // <span> element that closes the modal-finished       
+        // ---------modal finish-----------
            }
            
         if(document.getElementById("Prospective-Student").checked){
