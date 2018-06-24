@@ -61,52 +61,29 @@ main {
             color: $text-color-dark;
         }
     
-        @media screen and (max-width: $tabletLandscape){	
-                top: $padding/3;
-                font-size: 0.9em;
-                // font-size: 4vw;                   
-        }
-    
-        @media screen and (max-width: $tabletPortrait){
-                top: $padding/4;	
-                font-size: 0.7em;
-                // font-size: 4vw;        
-        }
-    
         @media screen and (max-width: $phoneLandscape) {
                 top: $padding/5;
                 left: 20px;  
                 font-size: 0.6em;
-                // font-size: 4vw; 
         }
         
-        @media screen and (max-width: $phonePortrait) {
-                top: 0px;
-                left: 20px;  
-                font-size: 0.5em;
-                // font-size: 4vw; 
+        .banner-title {
+            font-size: 6vw;
+            font-weight: 600;
+            color: $text-color-dark;
+            text-shadow:8px 8px 0 rgba(0,0,0,0.3);
         }
     
-        @media screen and (max-width: $phoneSmall){
-                top: 0;
-                left: 10px;
+        .banner-subtitle {           
+            font-size: 3vw;
+            font-weight: 400;
+            text-shadow: 2px 2px 2px rgb(53, 50, 50);
+            @media screen and (max-width: $phoneLandscape){        
+                display: none;  
+            }
         }
     }
-        
-    .banner-subtitle {
-        font-weight: 400;
-        font-size: 1.6vw;
-        text-shadow: 1px 1px 1px rgb(53, 50, 50);
-        @media screen and (max-width: $phoneLandscape){        
-            display: none;  
-        }
-    }
-    
-    .banner-title {
-        font-size: 3vw;
-        font-weight: 300;
-        color: $text-color-light;
-    }
+
     
     /* Banner Image Animation Keyframes */
     @keyframes fadeIn {
@@ -632,13 +609,12 @@ main {
         padding-right: 0.75em;
         border: dashed 1px black;
       }
+
     .span{
-    
-    color: white;
+        color: white;
         border-radius: 50%;
         padding: 0px 10px 0px 10px;
-        font-size: 1.2rem;
-        
+        font-size: 1.2rem;        
     }
     form, input, optgroup, select, legend{
         font-size: 1.3rem;
@@ -670,7 +646,7 @@ main {
     }
     
     .radio {
-        font-size: .5em;
+        font-size: 1em;
     }
     .controls {
         margin: $padding;
