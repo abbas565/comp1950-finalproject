@@ -14,5 +14,14 @@ footer {
         a{
             text-decoration: none;
         }
-    } 
+    }
+    
+    .footer-nav{
+        ul{
+            @include flex-layout-row;
+            @media (max-width: $phoneLandscape){
+                @include flex-layout-column;
+            }
+        }
+    }
 }
