@@ -21,6 +21,7 @@ footer {
             @include flex-layout-row;
             @media (max-width: $phoneLandscape){
                 @include flex-layout-column;
+                align-items: flex-start;
             }
         }
     }

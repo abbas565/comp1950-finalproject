@@ -29,6 +29,4 @@ function mouseEnter() {
     console.log(myid.id);
 
     document.getElementById("scheduleimg").src = "./images/schedule/Day"+ `${myid.id}` +".jpg";
-    
-console.log("hello abbas!!!")
 }
