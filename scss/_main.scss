@@ -276,7 +276,6 @@ main {
         grid-template-areas:
             "three two two"
             "one one one"
-            "five five five"
             "four four four";
             
 
@@ -291,7 +290,6 @@ main {
 			"three"
 			"two"
 			"one"
-            "five"
             "four";
     }
 
@@ -354,25 +352,7 @@ main {
         h2 {
             text-align: center;
         }
-    }
-
-    .box5-outline {
-        
-        grid-area: five;
-        border-radius: 5px;
-        padding: $padding*2;
-        @media screen and (max-width: $phonePortrait) {
-            padding: $padding*.2;
-            } 
-        box-shadow:2px 2px 9px $brand-color-dark;
-        h2 {
-            text-align: center;
-            padding: $padding/2;
-        }
-        li {
-            padding: 5px;
-        }
-    }   
+    }  
   }
 
 
