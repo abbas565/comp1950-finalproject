@@ -1,7 +1,12 @@
 // Main Styles
 
 main {
-    padding: $padding;    
+    padding: $padding;  
+    
+    img{
+        -webkit-filter: drop-shadow(3px 3px 12px black);
+	    filter: drop-shadow(3px 3px 12px black); 
+    }
 
     section:not(:first-child) {
         margin-top: $padding;
