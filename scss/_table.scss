@@ -65,43 +65,43 @@
 
     }
 
-    @media (max-width: $phoneLandscape) {
-        th, td {
-            text-align: left;
-        }
+    // @media (max-width: $phoneLandscape) {
+    //     th, td {
+    //         text-align: left;
+    //     }
         
-        tbody {
-            tr {
-                &:nth-child(even){
-                    background-color: lightblue;
-                }
-                &:nth-child(odd){
-                    background-color: white;
-                }
-            }
-            td {
-                display: block;
-                &:before {
-                    content: attr(data-th) ": ";
-                    display: inline-block;
-                    margin-right: 10px;
-                    font-weight: bold;
-                }
-                @at-root .dt tbody tr td:nth-child(1n){
-                    background-color: transparent;
-                    color:$text-color-dark;
-                    &:hover {
-                        background-color: rgba(white, 0.5);
-                        color:$text-color-dark;
-                    }
-                }
-            }    
-        }
+    //     tbody {
+    //         tr {
+    //             &:nth-child(even){
+    //                 background-color: lightblue;
+    //             }
+    //             &:nth-child(odd){
+    //                 background-color: white;
+    //             }
+    //         }
+    //         td {
+    //             display: block;
+    //             &:before {
+    //                 content: attr(data-th) ": ";
+    //                 display: inline-block;
+    //                 margin-right: 10px;
+    //                 font-weight: bold;
+    //             }
+    //             @at-root .dt tbody tr td:nth-child(1n){
+    //                 background-color: transparent;
+    //                 color:$text-color-dark;
+    //                 &:hover {
+    //                     background-color: rgba(white, 0.5);
+    //                     color:$text-color-dark;
+    //                 }
+    //             }
+    //         }    
+    //     }
 
-        th {
-            display: none;
-        }
+    //     th {
+    //         display: none;
+    //     }
           
-    }
+    // }
 
 }
