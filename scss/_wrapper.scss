@@ -4,3 +4,9 @@
     @include margin-center;
     background-color: $wrapper-bg-color;
 }
+
+.wrapper-lessons {
+    max-width: 1200px;
+    @include margin-center;
+    background-color: $wrapper-bgcolor-blue;  
+}

@@ -124,7 +124,8 @@ main {
     
     text-align: left;
     // text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-    padding:$padding/2;
+    padding:$padding/3;
+    margin-bottom: $padding;
     border: .5px solid rgba(0, 0, 0, 0.431);
   }
    
@@ -136,7 +137,7 @@ main {
         display: grid;
         margin-top: 50px;
         /* Use the repeat function to repeat same sized columns */
-        grid-template-columns: 3fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: auto;
         grid-row-gap: 100px;
         grid-column-gap: 50px;
@@ -274,6 +275,7 @@ main {
         /* Note: use " . "  as a placeholder if you want
            to leave one section of the grid blank */
         grid-template-areas:
+            "five five five"
             "three two two"
             "one one one"
             "four four four";
@@ -287,6 +289,7 @@ main {
         }
         grid-template-columns: 1fr;
         grid-template-areas:
+            "five"
 			"three"
 			"two"
 			"one"
@@ -345,14 +348,26 @@ main {
     }
 
     .box4-outline {
-        max-width: 70%;
+        max-width: 90%;
         grid-area: four;
         @include box-shadow;
         justify-self: center;     
         h2 {
             text-align: center;
         }
-    }  
+    } 
+    
+    .box5-outline {
+        grid-area: five;
+        border: .5px solid gray;
+        h2 {
+            font-size: 4em;
+            text-align: center;
+            letter-spacing: .2em;
+            font-weight: bold;
+            
+           }
+    }
   }
 
 
@@ -367,17 +382,17 @@ main {
     /* Note: use " . "  as a placeholder if you want
        to leave one section of the grid blank */
     grid-template-areas:
+       "fourteen fourteen fourteen fourteen"
         "one two three four"
         "twelve thirteen thirteen five"
         "eleven thirteen thirteen six"
         "ten nine eight seven";
-    h2 {
-            text-shadow:4px 4px 0 #341f941a;
-        }
+  
 
     @media screen and (max-width: $phoneLandscape) {
     grid-template-columns: 1fr;
     grid-template-areas:
+        "fourteen"
         "thirteen"
         "one"
         "two"
@@ -458,9 +473,22 @@ main {
         display: flex;
         justify-content: center;    
         align-items: center;
-        font-size: calc(2vw + 8px); 
+        font-size: 2vw; 
         @include box-mixin-style;
-    }    
+    } 
+
+    .box14-schedule {
+            grid-area: fourteen;
+            border: .5px solid gray;
+            h2 {
+                font-size: 4em;
+                text-align: center;
+                letter-spacing: .2em;
+                font-weight: bold;
+                
+               }
+
+    }
 }
 
 /* We start writing out grid(.container-lesson) here. */
@@ -468,8 +496,8 @@ main {
     display: grid;
     margin: 0 auto;
     justify-items: center;
-    grid-row-gap: 10px;
-    max-width: 600px;
+    grid-row-gap: 20px;
+    max-width: 700px;
     padding-bottom: 50px;
     /* Use the repeat function to repeat same sized columns */
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -483,7 +511,13 @@ main {
         "nine ten eleven twelve";
         
     @media screen and (max-width: $phoneLandscape) {
-        
+    .box13-Lesson {
+        h2 {
+            font-size: 8vw;
+            border: 1px solid grey;
+            padding: $padding*3/2;
+        }
+    }
     grid-template-columns: 1fr;
     grid-template-areas:
         "thirteen thirteen"
@@ -560,9 +594,8 @@ main {
 .box13-Lesson  {
    grid-area: thirteen;
    font-size: calc(2vw + 8px); 
-   border-radius: 5px;
-   border: 0;
-}    
+   border:0;
+ }    
 }
 
 
@@ -641,7 +674,7 @@ main {
       }
        
       input[type="checkbox"]{
-        margin-top: 10;
+        margin-top: 10px;
       }
       
       input[type="text"]{
@@ -718,6 +751,10 @@ main {
     }
 
 }
+
+.container-schedule,
+.container-Lessons,
+ header {
 a {
     color:$text-color-light;
     font-weight: bold;
@@ -729,6 +766,7 @@ a {
      &:focus {
          color:$text-color-dark;
      }
+    }
 }
 
 

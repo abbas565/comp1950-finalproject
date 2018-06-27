@@ -5,7 +5,7 @@
 
     .image-container {
         width: $three-col;
-        font-famiy: $heading-font;
+        font-family: $heading-font;
         @include plain-link;
         @include aspect-ratio-box('video');
 
