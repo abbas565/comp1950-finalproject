@@ -348,7 +348,7 @@ main {
     }
 
     .box4-outline {
-        max-width: 90%;
+        max-width: 100%;
         grid-area: four;
         @include box-shadow;
         justify-self: center;     
@@ -365,7 +365,11 @@ main {
             text-align: center;
             letter-spacing: .2em;
             font-weight: bold;
-            
+            @media screen and (max-width: $phoneLandscape){
+                font-size: 3em;
+                letter-spacing: .1em;
+
+            }
            }
     }
   }
