@@ -760,11 +760,11 @@ main {
 a {
     color:$text-color-light;
     font-weight: bold;
-    &:link { 
-        text-decoration: none;
+    &:link,
+    &:focus { 
+        text-decoration: none;        
      }
      &:hover,
-     &:focus,
      &:active {
          color:$text-color-dark;
      }
