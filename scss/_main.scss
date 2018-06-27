@@ -112,7 +112,7 @@ main {
       }
     
       to {
-        transform: translatX(0);
+        transform: translateX(0);
          opacity: 1;
       }
     }
@@ -513,11 +513,13 @@ main {
     @media screen and (max-width: $phoneLandscape) {
     .box13-Lesson {
         h2 {
-            font-size: 8vw;
+            font-size: 6vw;
             border: 1px solid grey;
             padding: $padding*3/2;
         }
+    
     }
+
     grid-template-columns: 1fr;
     grid-template-areas:
         "thirteen thirteen"
@@ -762,8 +764,8 @@ a {
         text-decoration: none;
      }
      &:hover,
-     &:active,
-     &:focus {
+     &:focus,
+     &:active {
          color:$text-color-dark;
      }
     }
